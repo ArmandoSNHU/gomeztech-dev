@@ -1,0 +1,7 @@
+# Local deploy helper - not part of the website
+deploy.bat
+
+# Windows / macOS junk
+Thumbs.db
+desktop.ini
+.DS_Store
