@@ -4,6 +4,7 @@ import { gsap } from '../lib/gsap';
 import { GH_USER, CURATED, FALLBACK, LANG_COLORS, fmtDate, rankRepos } from '../lib/projects';
 
 function ProjectCard({ repo }) {
+  const cardRef = useRef(null);
   const meta = CURATED[repo.name] || {};
   const desc = meta.desc || repo.description || 'Technical project — see repository for details.';
   const lang = repo.language;
@@ -12,12 +13,21 @@ function ProjectCard({ repo }) {
   const url = repo.html_url || `https://github.com/${GH_USER}/${repo.name}`;
   const tag = meta.tag || (repo.fork ? 'FORK' : 'REPO');
 
+  const handleMouseMove = (e) => {
+    const rect = cardRef.current.getBoundingClientRect();
+    cardRef.current.style.setProperty('--card-x', `${e.clientX - rect.left}px`);
+    cardRef.current.style.setProperty('--card-y', `${e.clientY - rect.top}px`);
+  };
+
   return (
     <motion.article
+      ref={cardRef}
       className="card"
-      whileHover={{ y: -3, borderColor: 'var(--line-bright)' }}
+      onMouseMove={handleMouseMove}
+      whileHover={{ y: -3 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
     >
+      <div className="card-spotlight" aria-hidden="true" />
       <div className="card-top">
         <h3>
           <span className="slash">{GH_USER}/</span>
