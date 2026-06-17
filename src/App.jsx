@@ -1,5 +1,8 @@
+import Grain from './components/Grain';
+import Cursor from './components/Cursor';
 import StatusBar from './components/StatusBar';
 import Hero from './components/Hero';
+import Stats from './components/Stats';
 import Capabilities from './components/Capabilities';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -9,9 +12,12 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
+      <Grain />
+      <Cursor />
       <StatusBar />
       <main>
         <Hero />
+        <Stats />
         <Capabilities />
         <Projects />
         <Experience />

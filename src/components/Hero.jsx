@@ -12,8 +12,8 @@ export default function Hero() {
       // Eyebrow
       tl.from('.hero-eyebrow', { opacity: 0, y: 14, duration: 0.45 });
 
-      // H1 — SplitText char-by-char reveal
-      const split = new SplitText('.hero-h1', { type: 'chars' });
+      // "Armando" — SplitText char-by-char
+      const split = new SplitText('.hero-h1-first', { type: 'chars' });
       gsap.set(split.chars, { transformPerspective: 400 });
       tl.from(
         split.chars,
@@ -21,30 +21,25 @@ export default function Hero() {
           opacity: 0,
           y: 44,
           rotationX: -40,
-          stagger: 0.022,
+          stagger: 0.028,
           duration: 0.55,
           transformOrigin: '0% 50% -30px',
         },
         '-=0.2',
       );
 
+      // "Gomez" — whole word slides up after Armando
+      tl.from('.hero-h1-last', { opacity: 0, y: 36, duration: 0.45 }, '-=0.25');
+
       // Lede
       tl.from('.hero-lede', { opacity: 0, y: 16, duration: 0.4 }, '-=0.3');
 
-      // Terminal block
+      // Terminal
       tl.from('.hero-terminal', { opacity: 0, y: 8, duration: 0.3 }, '-=0.2');
-      tl.from(
-        '.term-line',
-        { opacity: 0, x: -8, stagger: 0.13, duration: 0.25 },
-        '-=0.15',
-      );
+      tl.from('.term-line', { opacity: 0, x: -8, stagger: 0.13, duration: 0.25 }, '-=0.15');
 
-      // CTA buttons
-      tl.from(
-        '.hero-btn',
-        { opacity: 0, y: 8, stagger: 0.07, duration: 0.28 },
-        '-=0.1',
-      );
+      // CTAs
+      tl.from('.hero-btn', { opacity: 0, y: 8, stagger: 0.07, duration: 0.28 }, '-=0.1');
 
       return () => split.revert();
     }, heroRef);
@@ -54,11 +49,16 @@ export default function Hero() {
 
   return (
     <header className="hero" ref={heroRef}>
+      {/* Ambient glow orbs */}
+      <div className="hero-orb hero-orb-1" aria-hidden="true" />
+      <div className="hero-orb hero-orb-2" aria-hidden="true" />
+
       <div className="wrap">
         <div className="eyebrow hero-eyebrow">Network &amp; Systems Technician</div>
 
-        <h1 className="hero-h1">
-          Armando <span className="accent">Gomez</span>
+        <h1>
+          <span className="hero-h1-first">Armando </span>
+          <span className="hero-h1-last">Gomez</span>
         </h1>
 
         <p className="lede hero-lede">
