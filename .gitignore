@@ -1,6 +1,10 @@
 # Local deploy helper - not part of the website
 deploy.bat
 
+# Build output & dependencies
+node_modules/
+dist/
+
 # Windows / macOS junk
 Thumbs.db
 desktop.ini
