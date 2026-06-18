@@ -7,12 +7,13 @@ export default function Footer() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.from('.foot-cta', {
+        scrollTrigger: { trigger: '.foot-cta', start: 'top 90%' },
+        opacity: 0, y: 20, duration: 0.5, ease: 'power2.out',
+      });
       gsap.from(footerRef.current, {
         scrollTrigger: { trigger: footerRef.current, start: 'top 92%' },
-        opacity: 0,
-        y: 16,
-        duration: 0.5,
-        ease: 'power2.out',
+        opacity: 0, y: 16, duration: 0.5, ease: 'power2.out',
       });
     }, footerRef);
 
@@ -22,6 +23,27 @@ export default function Footer() {
   return (
     <footer ref={footerRef}>
       <div className="wrap">
+        <div className="foot-cta">
+          <p className="foot-cta-label">What's next?</p>
+          <h2 className="foot-cta-h2">Get In Touch</h2>
+          <p className="foot-cta-body">
+            Open to AI engineering, cloud architecture, and intelligent systems roles.
+            Whether you have an opportunity, a project, or just want to connect — my inbox
+            is always open.
+          </p>
+          <motion.a
+            className="btn primary"
+            href="mailto:armandogom83@yahoo.com"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.12 }}
+          >
+            Say Hello ↗
+          </motion.a>
+        </div>
+
+        <div className="foot-divider" />
+
         <div className="foot-grid">
           <div className="foot-links">
             <motion.a
