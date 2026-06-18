@@ -98,12 +98,12 @@ export default function Hero() {
           </motion.a>
           <motion.a
             className="btn hero-btn"
-            href="#resume"
+            href="mailto:armandogom83@yahoo.com"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.12 }}
           >
-            Resume
+            Get in Touch
           </motion.a>
           <motion.a
             className="btn hero-btn"

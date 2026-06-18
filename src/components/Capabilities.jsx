@@ -105,7 +105,7 @@ export default function Capabilities() {
       <div className="wrap">
         <div className="sec-head sec-head-caps">
           <span className="sec-num">01</span>
-          <h2 className="sec-title">What I can do</h2>
+          <h2 className="sec-title">What I Build</h2>
           <span className="sec-rule" />
           <span className="sec-tag">// AI · cloud · systems · automation</span>
         </div>
