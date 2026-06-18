@@ -5,6 +5,11 @@ deploy.bat
 node_modules/
 dist/
 
+# Local agent/tool settings
+.agents/
+.claude/
+.codex/
+
 # Windows / macOS junk
 Thumbs.db
 desktop.ini

@@ -36,14 +36,14 @@ const CAPS = [
     ],
   },
   {
-    ico: 'ITSM//',
-    title: 'Support & ITSM',
+    ico: 'DATA//',
+    title: 'Data & Intelligence',
     items: [
-      'ServiceNow ITSM',
-      'Incident management · ticketing',
-      'SLA & root-cause analysis',
-      'Asset tracking',
-      'Clear technical documentation',
+      'Telemetry & edge data pipelines',
+      'Analytics dashboards · Chart.js',
+      'Incident data automation',
+      'ServiceNow ITSM · ticketing',
+      'Root-cause analysis · SLA ops',
     ],
   },
   {
@@ -54,18 +54,18 @@ const CAPS = [
       'JavaScript · React',
       'FastAPI · REST APIs',
       'Google Apps Script',
-      'Dashboards · Chart.js',
+      'CI/CD · Git · Docker',
     ],
   },
   {
     ico: 'AI//',
-    title: 'AI & Homelab',
+    title: 'AI Systems & Agents',
     items: [
-      'Local LLMs · Ollama',
-      'Multi-node homelab',
-      'Docker workloads',
-      'RF / drone ops (Part 107)',
-      'Edge device troubleshooting',
+      'LLM APIs (OpenAI · Anthropic)',
+      'AI agents · agentic pipelines',
+      'Local LLMs · Ollama · RAG',
+      'Computer vision · edge AI',
+      'Drone ops · FAA Part 107',
     ],
   },
 ];
@@ -107,7 +107,7 @@ export default function Capabilities() {
           <span className="sec-num">01</span>
           <h2 className="sec-title">What I can do</h2>
           <span className="sec-rule" />
-          <span className="sec-tag">// core competencies</span>
+          <span className="sec-tag">// AI · cloud · systems · automation</span>
         </div>
 
         <div className="cap-grid">

@@ -1,11 +1,11 @@
 export const GH_USER = 'ArmandoSNHU';
 
 export const CURATED = {
-  'aws-terraform-lab-2026':        { p: 1, desc: 'Hands-on AWS labs provisioned with Terraform — immutable, highly-available infrastructure-as-code.', tag: 'CLOUD / IaC' },
-  'IT-helpdesk-lab-2026':          { p: 2, desc: 'Virtualized enterprise network on Hyper-V: Active Directory, GPOs, WSUS, and a private ServiceNow instance.', tag: 'SYSADMIN' },
-  'rtcc-mock-dashboard':           { p: 3, desc: 'React analytics dashboard modeling Real-Time Crime Center operations — KPIs, role-based views, reporting.', tag: 'REACT' },
-  'Secure_City_PD_RTCC_Dashboard': { p: 4, desc: 'Front-end reporting interface for public-safety telemetry with CSV/PDF export and data validation.', tag: 'DASHBOARD' },
-  'VideoCoder_App':                { p: 5, desc: 'Automated coding-tutorial screencast generator using pyautogui and OBS integration.', tag: 'AUTOMATION' },
+  'aws-terraform-lab-2026':        { p: 1, desc: 'Production AWS environment provisioned entirely with Terraform — immutable, highly-available infrastructure-as-code with modular architecture.', tag: 'CLOUD / IaC' },
+  'IT-helpdesk-lab-2026':          { p: 2, desc: 'Virtualized enterprise network on Hyper-V: Active Directory, GPOs, WSUS, and a private ServiceNow ITSM instance with automated ticketing workflows.', tag: 'SYSADMIN' },
+  'rtcc-mock-dashboard':           { p: 3, desc: 'Full-stack analytics platform for public-safety operations — real-time KPIs, role-based access control, automated incident reporting for 14+ analysts.', tag: 'REACT' },
+  'Secure_City_PD_RTCC_Dashboard': { p: 4, desc: 'Public-safety intelligence dashboard with live telemetry visualization, multi-role data views, and one-click CSV/PDF export pipeline.', tag: 'DASHBOARD' },
+  'VideoCoder_App':                { p: 5, desc: 'Automated coding-tutorial screencast generator — Python-driven workflow using pyautogui and OBS Studio API integration.', tag: 'AUTOMATION' },
 };
 
 export const FALLBACK = [

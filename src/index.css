@@ -30,8 +30,8 @@
 
 html { overflow: auto; }
 
-/* Hide default cursor on pointer devices */
-@media (hover: hover) {
+/* Hide default cursor on fine pointer devices */
+@media (hover: hover) and (pointer: fine) {
   html, html *, html *::before, html *::after {
     cursor: none !important;
   }
@@ -120,6 +120,7 @@ button:focus-visible {
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
   width: 7px;
   height: 7px;
   background: var(--amber);
@@ -134,6 +135,7 @@ button:focus-visible {
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
   width: 30px;
   height: 30px;
   border: 1.5px solid rgba(255, 178, 62, 0.7);
@@ -142,6 +144,13 @@ button:focus-visible {
   z-index: 99998;
   transform: translate(-50%, -50%);
   will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot,
+  .cursor-ring {
+    display: block;
+  }
 }
 
 /* ===== Status bar ===== */
@@ -338,7 +347,6 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  cursor: none;
 }
 
 .btn:hover {
@@ -579,5 +587,5 @@ footer { border-top: 1px solid var(--line); padding: 54px 0 40px; margin-top: 24
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   html, html * { cursor: auto !important; }
-  .cursor-dot, .cursor-ring { display: none; }
+  .cursor-dot, .cursor-ring { display: none !important; }
 }

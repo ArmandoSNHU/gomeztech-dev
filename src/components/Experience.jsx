@@ -3,32 +3,33 @@ import { gsap } from '../lib/gsap';
 
 const JOBS = [
   {
-    role: 'Network & Systems Technician',
-    org: 'Laredo Police Department — Real-Time Crime Center',
+    role: 'AI Systems & Technical Operations Engineer',
+    org: 'Laredo Police Department — Public Safety Technology Division',
     meta: 'Jan 2025 — Present · Laredo, TX',
     bullets: [
-      'Troubleshoot LAN/WAN anomalies — packet loss, latency, DNS failures — on 24/7 public-safety infrastructure supporting active 911 operations.',
-      'Engineered and deployed the RTCC Analytics Dashboard as a full-stack production web app with role-based access for 14+ analysts.',
-      'Monitor live traffic, perform root-cause analysis, and coordinate multi-vendor resolutions inside a restricted enterprise environment.',
-      'Pilot drone systems for aerial reconnaissance, delivering real-time situational intelligence to dispatch and field officers.',
+      'Architect and maintain edge-computing and surveillance infrastructure — Flock Safety cameras, Axon body-worn devices, and UAV systems — streaming real-time telemetry into operational intelligence dashboards.',
+      'Engineered a full-stack analytics platform (React/Node, role-based access) that aggregates incident data, KPI metrics, and automated reports for 14+ analysts on 24/7 public-safety operations.',
+      'Automate incident data workflows with Python and Google Apps Script, reducing manual reporting overhead and enabling near-real-time situational awareness for dispatch and command staff.',
+      'Diagnose LAN/WAN anomalies — packet loss, latency spikes, DNS failures — across a restricted enterprise network supporting active 911, CAD, and multi-agency data feeds.',
+      'Operate UAV systems for aerial reconnaissance, delivering live video intelligence streams to field officers and dispatch during critical incidents.',
     ],
   },
   {
-    role: 'ITV Technician III / Technical Systems Support',
+    role: 'Technical Systems Engineer',
     org: 'Laredo Independent School District',
     meta: '2018 — Jan 2025 · Laredo, TX',
     bullets: [
-      'Maintained AV, broadcast, and network-connected systems across district-wide facilities for live administrative and instructional workflows.',
-      'Supported hardware health monitoring and coordinated escalations across 100+ endpoints at multiple campuses.',
+      'Managed AV, broadcast, and network-connected endpoints across district-wide facilities — 100+ devices across multiple campuses — with hardware health monitoring and SLA-driven escalation workflows.',
+      'Built and maintained network infrastructure, device provisioning pipelines, and AV automation systems supporting live administrative and instructional workflows.',
     ],
   },
   {
-    role: 'Chief Photographer / Technical Workflow Lead',
+    role: 'Technical Workflow Lead',
     org: 'KGNS-TV (Gray Television)',
     meta: 'Mar 2015 — Jan 2018 · Laredo, TX',
     bullets: [
-      'Directed technical production workflows: camera networks, satellite uplink rigs, NLE systems, and media ingest pipelines.',
-      'Diagnosed field equipment and connectivity faults under breaking-news deadlines, resolving 3–5 technical failures weekly.',
+      'Directed end-to-end technical production workflows: live camera networks, satellite uplink rigs, NLE editing systems, and media ingest pipelines under real-time broadcast deadlines.',
+      'Diagnosed field equipment and connectivity faults under breaking-news conditions, averaging 3–5 resolved technical incidents per week with zero missed live windows.',
     ],
   },
 ];
@@ -70,7 +71,7 @@ export default function Experience() {
           <span className="sec-num">03</span>
           <h2 className="sec-title">Experience</h2>
           <span className="sec-rule" />
-          <span className="sec-tag">// 10+ yrs technical ops</span>
+          <span className="sec-tag">// 10+ yrs systems & AI ops</span>
         </div>
 
         <div className="xp">
