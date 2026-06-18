@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="hero-orb hero-orb-2" aria-hidden="true" />
 
       <div className="wrap">
-        <div className="eyebrow hero-eyebrow">Network &amp; Systems Technician</div>
+        <div className="eyebrow hero-eyebrow">AI Systems · Cloud · Automation Engineer</div>
 
         <h1>
           <span className="hero-h1-first">Armando </span>
@@ -62,15 +62,15 @@ export default function Hero() {
         </h1>
 
         <p className="lede hero-lede">
-          I keep <b>mission-critical infrastructure online</b> — from 24/7 public-safety
-          networks to the homelab and cloud environments I build to sharpen the craft.
-          Networking, Windows Server, AWS/Terraform, and automation that solves real
-          operational problems.
+          I build systems at the intersection of <b>AI, cloud infrastructure, and automation</b> —
+          from production public-safety dashboards and edge-device telemetry pipelines to
+          AI agents, AWS architectures, and full-stack applications that turn raw data into
+          operational intelligence.
         </p>
 
         <div className="terminal hero-terminal" aria-hidden="true">
           <div className="term-line">
-            <span className="pr">armando@rtcc</span>
+            <span className="pr">armando@gomeztech</span>
             <span style={{ color: 'var(--cyan)' }}>:~</span>
             <span className="cmd">$ whoami --summary</span>
           </div>
@@ -78,10 +78,10 @@ export default function Hero() {
             › B.S. Computer Science · M.S. Artificial Intelligence
           </div>
           <div className="term-line" style={{ color: 'var(--ink-dim)' }}>
-            › Google IT Support Cert · FAA Part 107
+            › Google IT Support Cert · FAA Part 107 · AWS (in progress)
           </div>
           <div className="term-line" style={{ color: 'var(--ink-dim)' }}>
-            › LAN/WAN · AD/GPO · Hyper-V · AWS · Python
+            › Python · FastAPI · React · AWS · AI Agents · LLM APIs
             <span className="cursor" />
           </div>
         </div>

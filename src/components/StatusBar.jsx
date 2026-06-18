@@ -14,7 +14,7 @@ export default function StatusBar() {
             LOC: <b>LAREDO, TX</b>
           </span>
           <span>
-            ROLE: <b>NETWORK &amp; SYSTEMS TECH</b>
+            ROLE: <b>AI · CLOUD · AUTOMATION</b>
           </span>
         </div>
       </div>
