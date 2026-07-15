@@ -6,7 +6,18 @@ export default function Hero() {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    let ctx;
+    let cancelled = false;
+
+    // Wait for webfonts (max 500ms) so SplitText measures the real font
+    const fontsReady = Promise.race([
+      document.fonts.ready,
+      new Promise((r) => setTimeout(r, 500)),
+    ]);
+
+    fontsReady.then(() => {
+      if (cancelled) return;
+      ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       // Eyebrow
@@ -42,9 +53,13 @@ export default function Hero() {
       tl.from('.hero-btn', { opacity: 0, y: 8, stagger: 0.07, duration: 0.28 }, '-=0.1');
 
       return () => split.revert();
-    }, heroRef);
+      }, heroRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancelled = true;
+      if (ctx) ctx.revert();
+    };
   }, []);
 
   return (

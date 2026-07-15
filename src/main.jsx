@@ -1,20 +1,22 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from './lib/gsap';
+import { gsap, ScrollTrigger, reducedMotion } from './lib/gsap';
 import App from './App';
 import './index.css';
 
-// Lenis smooth scroll connected to GSAP ticker
-const lenis = new Lenis({ anchors: true });
+// Lenis smooth scroll connected to GSAP ticker (skipped for reduced motion)
+if (!reducedMotion) {
+  const lenis = new Lenis({ anchors: true });
 
-lenis.on('scroll', ScrollTrigger.update);
+  lenis.on('scroll', ScrollTrigger.update);
 
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-gsap.ticker.lagSmoothing(0);
+  gsap.ticker.lagSmoothing(0);
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
