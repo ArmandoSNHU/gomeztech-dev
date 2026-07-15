@@ -59,17 +59,21 @@ export default function Capabilities() {
         ease: 'power2.out',
       });
 
+      const showAll = () => gsap.set('.cap', { clearProps: 'opacity,transform' });
+
       gsap.from('.cap', {
         scrollTrigger: {
           trigger: '.cap-grid',
           start: 'top 82%',
-          toggleActions: 'play none none none',
+          once: true,
         },
         opacity: 0,
         y: 28,
         stagger: { amount: 0.45, from: 'start' },
         duration: 0.5,
         ease: 'power2.out',
+        onComplete: showAll,
+        onInterrupt: showAll,
       });
     }, sectionRef);
 
