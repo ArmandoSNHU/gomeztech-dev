@@ -3,70 +3,46 @@ import { gsap } from '../lib/gsap';
 
 const CAPS = [
   {
-    ico: 'NET//',
-    title: 'Networking',
-    items: [
-      'TCP/IP · DNS · DHCP · VLANs',
-      'LAN/WAN · subnetting · OSI',
-      'Packet loss & latency analysis',
-      'Wireshark · ping/traceroute',
-      'Tailscale VPN · monitoring',
-    ],
+    ico: 'AI//',
+    title: 'AI Systems & Agents',
+    lead:
+      'AI agents and LLM-powered tools that do real work — an explainable helpdesk triage engine with priority scoring, RAG pipelines over local models, and edge computer vision.',
+    tags: ['LLM APIs', 'Agents', 'RAG', 'Ollama', 'Computer Vision'],
   },
   {
-    ico: 'SYS//',
-    title: 'Systems & Servers',
-    items: [
-      'Windows Server 2022',
-      'Active Directory · GPO',
-      'Hyper-V virtualization',
-      'WSUS · Microsoft Entra ID',
-      'Linux (Ubuntu / Mint)',
-    ],
+    ico: 'DATA//',
+    title: 'Operational Intelligence',
+    lead:
+      'Production public-safety dashboards that turn live telemetry into decisions — multi-role data views, edge-device pipelines, and one-click CSV/PDF reporting.',
+    tags: ['Telemetry', 'Dashboards', 'Chart.js', 'ServiceNow', 'SLA Ops'],
   },
   {
     ico: 'CLD//',
     title: 'Cloud & IaC',
-    items: [
-      'AWS provisioning',
-      'Terraform / infrastructure-as-code',
-      'Immutable infra patterns',
-      'Cloudflare (Pages / Tunnel / D1)',
-      'Infra documentation',
-    ],
+    lead:
+      'AWS environments provisioned entirely with Terraform — immutable, modular, documented infrastructure-as-code, plus Cloudflare edge deployment.',
+    tags: ['AWS', 'Terraform', 'IaC', 'Cloudflare Pages', 'D1 / Tunnel'],
   },
   {
-    ico: 'DATA//',
-    title: 'Data & Intelligence',
-    items: [
-      'Telemetry & edge data pipelines',
-      'Analytics dashboards · Chart.js',
-      'Incident data automation',
-      'ServiceNow ITSM · ticketing',
-      'Root-cause analysis · SLA ops',
-    ],
+    ico: 'SYS//',
+    title: 'Enterprise Systems',
+    lead:
+      'Virtualized enterprise networks on Hyper-V — Active Directory, GPOs, WSUS patching, and a private ITSM instance with automated ticketing workflows.',
+    tags: ['Windows Server 2022', 'AD / GPO', 'Hyper-V', 'Entra ID', 'Linux'],
+  },
+  {
+    ico: 'NET//',
+    title: 'Network Operations',
+    lead:
+      'Networks that stay up and prove it — packet-level troubleshooting, latency and loss analysis, VPN overlays, and 24/7 monitoring across 100+ endpoints.',
+    tags: ['TCP/IP', 'VLANs', 'Wireshark', 'Tailscale', 'Monitoring'],
   },
   {
     ico: 'DEV//',
-    title: 'Automation & Dev',
-    items: [
-      'Python · Bash · SQL',
-      'JavaScript · React',
-      'FastAPI · REST APIs',
-      'Google Apps Script',
-      'CI/CD · Git · Docker',
-    ],
-  },
-  {
-    ico: 'AI//',
-    title: 'AI Systems & Agents',
-    items: [
-      'LLM APIs (OpenAI · Anthropic)',
-      'AI agents · agentic pipelines',
-      'Local LLMs · Ollama · RAG',
-      'Computer vision · edge AI',
-      'Drone ops · FAA Part 107',
-    ],
+    title: 'Automation & Tooling',
+    lead:
+      'Automation that removes toil — runbook validation and execution kits, incident data pipelines, REST APIs, and CI/CD from commit to deploy.',
+    tags: ['Python', 'FastAPI', 'React', 'Bash / SQL', 'CI/CD · Docker'],
   },
 ];
 
@@ -115,11 +91,12 @@ export default function Capabilities() {
             <div className="cap" key={c.ico}>
               <div className="cap-ico">{c.ico}</div>
               <h3>{c.title}</h3>
-              <ul>
-                {c.items.map((item) => (
-                  <li key={item}>{item}</li>
+              <p className="cap-lead">{c.lead}</p>
+              <div className="cap-tags">
+                {c.tags.map((tag) => (
+                  <span className="cap-tag" key={tag}>{tag}</span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

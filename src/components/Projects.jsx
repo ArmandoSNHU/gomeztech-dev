@@ -3,6 +3,57 @@ import { motion } from 'motion/react';
 import { gsap } from '../lib/gsap';
 import { GH_USER, CURATED, FALLBACK, LANG_COLORS, fmtDate, rankRepos } from '../lib/projects';
 
+function FeaturedProduct() {
+  const cardRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const rect = cardRef.current.getBoundingClientRect();
+    cardRef.current.style.setProperty('--card-x', `${e.clientX - rect.left}px`);
+    cardRef.current.style.setProperty('--card-y', `${e.clientY - rect.top}px`);
+  };
+
+  return (
+    <motion.article
+      ref={cardRef}
+      className="card featured-card"
+      onMouseMove={handleMouseMove}
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.15, ease: 'easeOut' }}
+    >
+      <div className="card-spotlight" aria-hidden="true" />
+      <div className="card-top">
+        <h3>
+          <span className="slash">live product · </span>
+          VideoCode.dev
+        </h3>
+        <span className="repo-mark featured-mark">SHIPPED</span>
+      </div>
+      <p>
+        Developer newsletter and coding platform with an 8-bit soul — running in
+        production on Cloudflare. A multi-agent AI pipeline (three LLMs) drafts the
+        content, a Flask backend manages subscribers, and a custom automation app
+        generates narrated coding screencasts end-to-end.
+      </p>
+      <div className="featured-tags">
+        <span className="cap-tag">Multi-agent pipeline</span>
+        <span className="cap-tag">Flask backend</span>
+        <span className="cap-tag">Cloudflare</span>
+        <span className="cap-tag">Screencast automation</span>
+      </div>
+      <div className="card-foot">
+        <a
+          className="card-link"
+          href="https://videocode.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          visit videocode.dev ↗
+        </a>
+      </div>
+    </motion.article>
+  );
+}
+
 function ProjectCard({ repo }) {
   const cardRef = useRef(null);
   const meta = CURATED[repo.name] || {};
@@ -115,6 +166,8 @@ export default function Projects() {
           <span className="sec-rule" />
           <span className="sec-tag">// live from github</span>
         </div>
+
+        <FeaturedProduct />
 
         <div id="repo-status">
           {status.live ? (

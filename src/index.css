@@ -553,6 +553,30 @@ section { padding: 62px 0; }
 .cap li { font-family: var(--mono); font-size: 12px; color: var(--ink-mid); padding: 3px 0; display: flex; gap: 8px; }
 .cap li::before { content: '›'; color: var(--amber); }
 
+.cap { display: flex; flex-direction: column; }
+.cap-lead { font-family: var(--body); font-size: 13.5px; line-height: 1.6; color: var(--ink-mid); margin: 0 0 14px; }
+.cap-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.cap-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.03em;
+  color: var(--ink-dim);
+  background: var(--bg-grid);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3px 8px;
+  transition: 0.15s ease;
+}
+.cap:hover .cap-tag { color: var(--amber); border-color: rgba(255, 178, 62, 0.3); }
+
+/* ===== Featured product card ===== */
+.featured-card { margin-bottom: 16px; border-color: rgba(255, 178, 62, 0.25); }
+.featured-mark { color: var(--online); border-color: rgba(91, 209, 138, 0.35); }
+.featured-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 14px; }
+.featured-card:hover .cap-tag { color: var(--amber); border-color: rgba(255, 178, 62, 0.3); }
+
+
+
 /* ===== Projects ===== */
 .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 @media (max-width: 720px) { .proj-grid { grid-template-columns: 1fr; } }
