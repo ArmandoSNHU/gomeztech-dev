@@ -6,7 +6,7 @@ import App from './App';
 import './index.css';
 
 // Lenis smooth scroll connected to GSAP ticker
-const lenis = new Lenis();
+const lenis = new Lenis({ anchors: true });
 
 lenis.on('scroll', ScrollTrigger.update);
 
