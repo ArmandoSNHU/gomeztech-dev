@@ -63,7 +63,7 @@ export default function Capabilities() {
         scrollTrigger: {
           trigger: '.cap-grid',
           start: 'top 82%',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play none none none',
         },
         opacity: 0,
         y: 28,
