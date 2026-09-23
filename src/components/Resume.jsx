@@ -72,9 +72,9 @@ export default function Resume() {
             <ul className="ref-list">
               <li>
                 <span className="ref-name">Romy Mutuc</span>
-                <span className="ref-title">Lieutenant · Laredo Police Department</span>
-                <a className="ref-email" href="mailto:rmutuc@ci.laredo.tx.us">
-                  rmutuc@ci.laredo.tx.us
+                <span className="ref-title">Customer Support Manager · BRINC (DFR)</span>
+                <a className="ref-email" href="mailto:mutucr@gmail.com">
+                  mutucr@gmail.com
                 </a>
               </li>
               <li>
