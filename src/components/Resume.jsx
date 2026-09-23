@@ -43,15 +43,15 @@ export default function Resume() {
             <h3>Education</h3>
 
             <div className="edu-item">
-              <div className="edu-deg">Doctorate in Artificial Intelligence</div>
+              <div className="edu-deg">Doctoral Study in Artificial Intelligence</div>
               <div className="edu-school">Capitol Technology University — South Laurel, MD</div>
-              <div className="edu-date">Starting Aug 2026 — Jan 2030</div>
+              <div className="edu-date">In progress · Aug 2026 — Expected Jan 2030</div>
             </div>
 
             <div className="edu-item">
               <div className="edu-deg">M.S. Artificial Intelligence</div>
               <div className="edu-school">Colorado State University Global — Aurora, CO</div>
-              <div className="edu-date">Nov 2024 — Aug 2026</div>
+              <div className="edu-date">Completed Aug 2026 · Nov 2024 — Aug 2026</div>
             </div>
 
             <div className="edu-item">

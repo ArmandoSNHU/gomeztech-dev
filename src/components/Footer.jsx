@@ -27,7 +27,7 @@ export default function Footer() {
           <p className="foot-cta-label">What's next?</p>
           <h2 className="foot-cta-h2">Get In Touch</h2>
           <p className="foot-cta-body">
-            Open to AI engineering, cloud architecture, and intelligent systems roles.
+            Open to remote technical support, application support, IT operations, and AI automation roles.
             Whether you have an opportunity, a project, or just want to connect — my inbox
             is always open.
           </p>

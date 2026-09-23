@@ -69,7 +69,7 @@ export default function Hero() {
       <div className="hero-orb hero-orb-2" aria-hidden="true" />
 
       <div className="wrap">
-        <div className="eyebrow hero-eyebrow">AI Systems · Cloud · Automation Engineer</div>
+        <div className="eyebrow hero-eyebrow">Technical Support · Systems · AI Automation</div>
 
         <h1>
           <span className="hero-h1-first">Armando </span>
@@ -77,10 +77,10 @@ export default function Hero() {
         </h1>
 
         <p className="lede hero-lede">
-          I build systems at the intersection of <b>AI, cloud infrastructure, and automation</b> —
-          from production public-safety dashboards and edge-device telemetry pipelines to
-          AI agents, AWS architectures, and full-stack applications that turn raw data into
-          operational intelligence.
+          I help people resolve <b>application, systems, and network problems</b> and build
+          tools that make their work easier — from public-safety dashboards to AI agents
+          and automation. Based in Laredo, Texas, I bring 8+ years of technical support
+          experience and am open to remote support, IT operations, and AI automation roles.
         </p>
 
         <div className="terminal hero-terminal" aria-hidden="true">

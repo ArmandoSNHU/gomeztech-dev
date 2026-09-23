@@ -3,8 +3,8 @@ import { gsap } from '../lib/gsap';
 
 const JOBS = [
   {
-    role: 'AI Systems & Technical Operations Engineer',
-    org: 'Laredo Police Department — Public Safety Technology Division',
+    role: 'Network & Systems Technician',
+    org: 'City of Laredo Police Department — Real-Time Crime Center',
     meta: 'Jan 2025 — Present · Laredo, TX',
     bullets: [
       'Architect and maintain edge-computing and surveillance infrastructure — Flock Safety cameras, Axon body-worn devices, and UAV systems — streaming real-time telemetry into operational intelligence dashboards.',
@@ -15,7 +15,7 @@ const JOBS = [
     ],
   },
   {
-    role: 'Technical Systems Engineer',
+    role: 'ITV Technician III / Technical Systems Support',
     org: 'Laredo Independent School District',
     meta: '2018 — Jan 2025 · Laredo, TX',
     bullets: [
@@ -24,7 +24,7 @@ const JOBS = [
     ],
   },
   {
-    role: 'Technical Workflow Lead',
+    role: 'Chief Photographer / Technical Workflow Lead',
     org: 'KGNS-TV (Gray Television)',
     meta: 'Mar 2015 — Jan 2018 · Laredo, TX',
     bullets: [
@@ -71,7 +71,7 @@ export default function Experience() {
           <span className="sec-num">03</span>
           <h2 className="sec-title">Experience</h2>
           <span className="sec-rule" />
-          <span className="sec-tag">// 10+ yrs systems & AI ops</span>
+          <span className="sec-tag">// technical support · systems · operations</span>
         </div>
 
         <div className="xp">

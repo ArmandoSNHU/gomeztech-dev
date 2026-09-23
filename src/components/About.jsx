@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap';
 
 const FOCUS = [
-  'M.S. Artificial Intelligence — Colorado State University Global (in progress)',
+  'Doctoral study in Artificial Intelligence — Capitol Technology University (Aug 2026–expected Jan 2030)',
   'Building AI agents and agentic pipelines with OpenAI & Anthropic APIs',
   'AWS cloud architecture and infrastructure-as-code with Terraform',
-  'Targeting roles in AI engineering, cloud architecture, and intelligent systems',
+  'Open to remote technical support, application support, IT operations, and AI automation roles',
 ];
 
 const TAGS = [
@@ -44,7 +44,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text">
             <p className="about-intro">
-              I'm a systems engineer and AI practitioner based in <b>Laredo, TX</b>, building
+              I'm a network and systems technician and AI practitioner based in <b>Laredo, TX</b>, building
               at the intersection of intelligent automation, cloud infrastructure, and
               real-world operational systems. My background spans broadcast production
               pipelines, district-wide IT infrastructure, and production-grade public-safety
@@ -52,10 +52,10 @@ export default function About() {
               builder's hands for shipping.
             </p>
             <p className="about-intro">
-              Currently completing my <b>M.S. in Artificial Intelligence</b> and laying the
-              groundwork for a doctorate — not for the credential, but because I want to work
-              on the hard problems at the frontier of AI systems design and intelligent
-              infrastructure.
+              I completed my <b>M.S. in Artificial Intelligence</b> at Colorado State University
+              Global in August 2026 and began doctoral study in Artificial Intelligence at
+              Capitol Technology University that same month, with completion expected in
+              January 2030. I apply that learning to practical support, automation, and AI projects.
             </p>
 
             <h4 className="about-sub">Currently focused on</h4>
