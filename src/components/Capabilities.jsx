@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap';
 
+function openInNewTab(url) {
+  if (url) window.open(url, '_blank', 'noopener,noreferrer');
+}
+
 const CAPS = [
   {
     ico: 'AI//',
@@ -8,13 +12,17 @@ const CAPS = [
     lead:
       'AI agents and LLM-powered tools that do real work — an explainable helpdesk triage engine with priority scoring, RAG pipelines over local models, and edge computer vision.',
     tags: ['LLM APIs', 'Agents', 'RAG', 'Ollama', 'Computer Vision'],
+    href: 'https://github.com/ArmandoSNHU/ai-code-review',
+    example: 'ai-code-review',
   },
   {
     ico: 'DATA//',
     title: 'Operational Intelligence',
     lead:
       'Production public-safety dashboards that turn live telemetry into decisions — multi-role data views, edge-device pipelines, and one-click CSV/PDF reporting.',
-    tags: ['Telemetry', 'Dashboards', 'Chart.js', 'ServiceNow', 'SLA Ops'],
+    tags: ['Telemetry', 'Dashboards', 'Recharts', 'ServiceNow', 'SLA Ops'],
+    href: 'https://armandosnhu.github.io/Secure-City-Analytics/',
+    example: 'live demo',
   },
   {
     ico: 'CLD//',
@@ -22,6 +30,8 @@ const CAPS = [
     lead:
       'AWS environments provisioned entirely with Terraform — immutable, modular, documented infrastructure-as-code, plus Cloudflare edge deployment.',
     tags: ['AWS', 'Terraform', 'IaC', 'Cloudflare Pages', 'D1 / Tunnel'],
+    href: 'https://github.com/ArmandoSNHU/aws-terraform-lab-2026',
+    example: 'aws-terraform-lab',
   },
   {
     ico: 'SYS//',
@@ -29,6 +39,8 @@ const CAPS = [
     lead:
       'Virtualized enterprise networks on Hyper-V — Active Directory, GPOs, WSUS patching, and a private ITSM instance with automated ticketing workflows.',
     tags: ['Windows Server 2022', 'AD / GPO', 'Hyper-V', 'Entra ID', 'Linux'],
+    href: 'https://github.com/ArmandoSNHU/IT-helpdesk-lab-2026',
+    example: 'IT-helpdesk-lab',
   },
   {
     ico: 'NET//',
@@ -36,6 +48,8 @@ const CAPS = [
     lead:
       'Networks that stay up and prove it — packet-level troubleshooting, latency and loss analysis, VPN overlays, and 24/7 monitoring across 100+ endpoints.',
     tags: ['TCP/IP', 'VLANs', 'Wireshark', 'Tailscale', 'Monitoring'],
+    href: 'https://armandosnhu.github.io/TechOpsagent/',
+    example: 'live demo',
   },
   {
     ico: 'DEV//',
@@ -43,6 +57,8 @@ const CAPS = [
     lead:
       'Automation that removes toil — runbook validation and execution kits, incident data pipelines, REST APIs, and CI/CD from commit to deploy.',
     tags: ['Python', 'FastAPI', 'React', 'Bash / SQL', 'CI/CD · Docker'],
+    href: 'https://github.com/ArmandoSNHU/ops-runbook-automation-kit',
+    example: 'ops-runbook-kit',
   },
 ];
 
@@ -92,7 +108,21 @@ export default function Capabilities() {
 
         <div className="cap-grid">
           {CAPS.map((c) => (
-            <div className="cap" key={c.ico}>
+            <div
+              className="cap"
+              key={c.ico}
+              role="link"
+              tabIndex={0}
+              aria-label={`${c.title} — see example: ${c.example}`}
+              style={{ cursor: 'pointer' }}
+              onClick={() => openInNewTab(c.href)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openInNewTab(c.href);
+                }
+              }}
+            >
               <div className="cap-ico">{c.ico}</div>
               <h3>{c.title}</h3>
               <p className="cap-lead">{c.lead}</p>
@@ -101,6 +131,9 @@ export default function Capabilities() {
                   <span className="cap-tag" key={tag}>{tag}</span>
                 ))}
               </div>
+              <span className="card-link" style={{ marginTop: '0.75rem', display: 'inline-block' }}>
+                see example: {c.example} ↗
+              </span>
             </div>
           ))}
         </div>
