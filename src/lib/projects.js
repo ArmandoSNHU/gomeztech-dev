@@ -5,8 +5,8 @@ export const CURATED = {
   'ai-code-review':            { p: 2, desc: 'Multi-agent AI code review: four specialist reviewers (security, bugs, performance, quality) run in parallel on local LLMs, then an aggregator synthesizes a severity-graded report. No API keys.', tag: 'APPLIED AI' },
   'FDE_Dashboard':             { p: 3, desc: 'Forward-deployed engineering in public: a role-scoped MCP server with prompt-injection defenses, 173 tests, and an eval harness that lifts safe decisions from 45.9% to 94.6%.', tag: 'FDE / MCP' },
   'ai-ticket-to-code':         { p: 4, desc: 'A 5-stage agentic pipeline (parse → design → code → test → PR) that turns a plain-English ticket into runnable code, unit tests, and a PR description using local LLMs.', tag: 'AGENT PIPELINE' },
-  'aws-terraform-lab-2026':    { p: 5, desc: 'Production-style AWS environment provisioned entirely with Terraform — validated inputs that refuse 0.0.0.0/0 SSH, IMDSv2 required, encrypted storage, least-privilege IAM, tfsec in CI.', tag: 'CLOUD / IaC' },
-  'IT-helpdesk-lab-2026':      { p: 6, desc: 'Virtualized enterprise lab on Hyper-V: Active Directory, GPOs, WSUS, Entra ID hybrid identity, and a ServiceNow ITSM instance, with CI-linted PowerShell automation.', tag: 'SYSADMIN' },
+  'Secure-City-Analytics':     { p: 5, desc: 'Role-based public-safety analytics platform — React 18 + TypeScript (strict), 3-role access control, 19 tests, an accessible Recharts UI, and CI/CD to a live demo on GitHub Pages.', tag: 'REACT / TYPESCRIPT' },
+  'aws-terraform-lab-2026':    { p: 6, desc: 'Production-style AWS environment provisioned entirely with Terraform — validated inputs that refuse 0.0.0.0/0 SSH, IMDSv2 required, encrypted storage, least-privilege IAM, tfsec in CI.', tag: 'CLOUD / IaC' },
   'ai-helpdesk-triage-engine': { p: 7, desc: 'Explainable IT ticket triage: category, P1–P4 priority, SLA, routing, and confidence with the signals behind each decision — a stable JSON contract ready for an LLM classifier.', tag: 'APPLIED AI / ITSM' },
   'TechOpsagent':              { p: 8, desc: 'Local-first incident-investigation workspace (FastAPI + SQLite) that turns controlled failures and imported logs into evidence-ranked hypotheses and downloadable RCA reports.', tag: 'OPS TOOLING' },
 };
@@ -16,8 +16,8 @@ export const FALLBACK = [
   { name: 'ai-code-review', language: 'Python' },
   { name: 'FDE_Dashboard', language: 'Python' },
   { name: 'ai-ticket-to-code', language: 'Python' },
+  { name: 'Secure-City-Analytics', language: 'TypeScript' },
   { name: 'aws-terraform-lab-2026', language: 'HCL' },
-  { name: 'IT-helpdesk-lab-2026', language: 'PowerShell' },
   { name: 'ai-helpdesk-triage-engine', language: 'Python' },
   { name: 'TechOpsagent', language: 'Python' },
 ];
