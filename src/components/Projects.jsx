@@ -3,8 +3,13 @@ import { motion } from 'motion/react';
 import { gsap } from '../lib/gsap';
 import { GH_USER, CURATED, FALLBACK, LANG_COLORS, fmtDate, rankRepos } from '../lib/projects';
 
+function openInNewTab(url) {
+  if (url) window.open(url, '_blank', 'noopener,noreferrer');
+}
+
 function FeaturedProduct() {
   const cardRef = useRef(null);
+  const url = 'https://videocode.dev';
 
   const handleMouseMove = (e) => {
     const rect = cardRef.current.getBoundingClientRect();
@@ -16,6 +21,17 @@ function FeaturedProduct() {
     <motion.article
       ref={cardRef}
       className="card featured-card"
+      role="link"
+      tabIndex={0}
+      aria-label="Visit VideoCode.dev"
+      style={{ cursor: 'pointer' }}
+      onClick={() => openInNewTab(url)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openInNewTab(url);
+        }
+      }}
       onMouseMove={handleMouseMove}
       whileHover={{ y: -3 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
@@ -43,9 +59,10 @@ function FeaturedProduct() {
       <div className="card-foot">
         <a
           className="card-link"
-          href="https://videocode.dev"
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
         >
           visit videocode.dev ↗
         </a>
@@ -74,6 +91,17 @@ function ProjectCard({ repo }) {
     <motion.article
       ref={cardRef}
       className="card"
+      role="link"
+      tabIndex={0}
+      aria-label={`Open ${repo.name} on GitHub`}
+      style={{ cursor: 'pointer' }}
+      onClick={() => openInNewTab(url)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openInNewTab(url);
+        }
+      }}
       onMouseMove={handleMouseMove}
       whileHover={{ y: -3 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
@@ -95,7 +123,13 @@ function ProjectCard({ repo }) {
           </span>
         )}
         {updated && <span>↻ {updated}</span>}
-        <a className="card-link" href={url} target="_blank" rel="noopener noreferrer">
+        <a
+          className="card-link"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           open ↗
         </a>
       </div>
