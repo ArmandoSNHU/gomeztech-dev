@@ -47,13 +47,13 @@ function FeaturedProduct() {
       <p>
         Developer newsletter and coding platform with an 8-bit soul — running in
         production on Cloudflare. A multi-agent AI pipeline (three LLMs) drafts the
-        content, a Flask backend manages subscribers, and a custom automation app
+        content, a Flask backend served through a Cloudflare Tunnel manages subscribers, and a custom automation app
         generates narrated coding screencasts end-to-end.
       </p>
       <div className="featured-tags">
         <span className="cap-tag">Multi-agent pipeline</span>
         <span className="cap-tag">Flask backend</span>
-        <span className="cap-tag">Cloudflare</span>
+        <span className="cap-tag">Cloudflare Tunnel</span>
         <span className="cap-tag">Screencast automation</span>
       </div>
       <div className="card-foot">

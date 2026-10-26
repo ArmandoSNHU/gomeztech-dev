@@ -5,7 +5,7 @@ const STATS = [
   { value: 10, suffix: '+', label: 'Years Technical Ops' },
   { value: 24,  suffix: '/7', label: 'Uptime Maintained' },
   { value: 100, suffix: '+', label: 'Endpoints Managed' },
-  { value: 3,   suffix: '',  label: 'Active Degrees' },
+  { value: 2,   suffix: '',  label: 'Degrees Earned' },
 ];
 
 export default function Stats() {

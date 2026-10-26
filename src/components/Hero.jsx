@@ -90,7 +90,7 @@ export default function Hero() {
             <span className="cmd">$ whoami --summary</span>
           </div>
           <div className="term-line" style={{ marginTop: 6, color: 'var(--ink-dim)' }}>
-            › B.S. Computer Science · M.S. Artificial Intelligence
+            › B.S. Computer Science · M.S. Artificial Intelligence (Aug 2026)
           </div>
           <div className="term-line" style={{ color: 'var(--ink-dim)' }}>
             › Google IT Support Cert · FAA Part 107 · AWS (in progress)
