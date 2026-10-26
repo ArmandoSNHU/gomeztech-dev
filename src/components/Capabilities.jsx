@@ -28,8 +28,8 @@ const CAPS = [
     ico: 'CLD//',
     title: 'Cloud & IaC',
     lead:
-      'AWS environments provisioned entirely with Terraform — immutable, modular, documented infrastructure-as-code, plus Cloudflare edge deployment.',
-    tags: ['AWS', 'Terraform', 'IaC', 'Cloudflare Pages', 'D1 / Tunnel'],
+      'AWS environments provisioned entirely with Terraform — immutable, modular, documented infrastructure-as-code, plus Cloudflare edge deployment with a Cloudflare Tunnel fronting a production Flask backend.',
+    tags: ['AWS', 'Terraform', 'IaC', 'Cloudflare Pages', 'Cloudflare Tunnel'],
     href: 'https://github.com/ArmandoSNHU/aws-terraform-lab-2026',
     example: 'aws-terraform-lab',
   },
@@ -46,8 +46,8 @@ const CAPS = [
     ico: 'NET//',
     title: 'Network Operations',
     lead:
-      'Networks that stay up and prove it — packet-level troubleshooting, latency and loss analysis, VPN overlays, and 24/7 monitoring across 100+ endpoints.',
-    tags: ['TCP/IP', 'VLANs', 'Wireshark', 'Tailscale', 'Monitoring'],
+      'Networks that stay up and prove it — packet-level troubleshooting, latency and loss analysis, VPN overlays, Cloudflare Tunnel ingress with zero open inbound ports, and 24/7 monitoring across 100+ endpoints.',
+    tags: ['TCP/IP', 'VLANs', 'Wireshark', 'Tailscale', 'Cloudflare Tunnel', 'Monitoring'],
     href: 'https://armandosnhu.github.io/TechOpsagent/',
     example: 'live demo',
   },
